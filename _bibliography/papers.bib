@@ -3,83 +3,94 @@
 
 @string{aps = {American Physical Society,}}
 
-@book{einstein1956investigations,
-  bibtex_show={true},
-  title={Investigations on the Theory of the Brownian Movement},
-  author={Einstein, Albert},
-  year={1956},
-  publisher={Courier Corporation},
-  preview={brownian-motion.gif}
+
+
+@article{guo2024mambair,
+  title={MambaIR: A Simple Baseline for Image Restoration with State-Space Model},
+  author={Guo*,Hang and Li*,Jinmin and Dai,Tao and Ouyang,Zhihao and Ren, Xudong and Xia,Shu-Tao},
+  journal={arXiv preprint},
+  year={2024},
+  abstract={Recent years have witnessed great progress in image restoration thanks to the advancements in modern deep neural networks e.g. Convolutional Neural Network and Transformer. However, existing restoration backbones are usually limited due to the inherent local reductive bias or quadratic computational complexity. Recently, Selective Structured State Space Model e.g., Mamba, have shown great potential for long-range dependencies modeling with linear complexity, but it is still under-explored in low-level computer vision. In this work, we introduce a simple but strong benchmark model, named MambaIR, for image restoration. In detail, we propose the Residual State Space Block as the core component, which employs convolution and channel attention to enhance capabilities of the vanilla Mamba. In this way, our MambaIR takes advantages of local patch recurrence prior as well as channel interaction to produce restoration-specific feature representation. Extensive experiments demonstrate the superiority of our method, for example, MambaIR outperforms Transformer-based baseline SwinIR by up to 0.36dB, using similar computational cost but with global receptive field.},
+  selected=true,
+  pdf={http://arxiv.org/abs/2402.15648},
+  code={https://github.com/csguoh/MambaIR},
 }
 
-@article{einstein1950meaning,
-  abbr={AJP},
-  bibtex_show={true},
-  title={The meaning of relativity},
-  author={Einstein, Albert and Taub, AH},
-  journal={American Journal of Physics},
-  volume={18},
-  number={6},
-  pages={403--404},
-  year={1950},
-  publisher={American Association of Physics Teachers}
+
+@article{liu2024taming,
+  title={Taming Pre-trained LLMs for Generalised Time Series Forecasting via Cross-modal Knowledge Distillation},
+  author={Liu*, Peiyuan and Guo*, Hang and Dai, Tao and Li, Naiqi and Bao, Jigang and Ren, Xudong and Jiang, Yong and Xia, Shu-Tao},
+  journal={arXiv preprint},
+  year={2024},
+  selected=true,
+  pdf={https://arxiv.org/html/2403.07300v1},
+  code={https://github.com/Hank0626/LLaTA},
 }
 
-@article{PhysRev.47.777,
-  abbr={PhysRev},
-  title={Can Quantum-Mechanical Description of Physical Reality Be Considered Complete?},
-  author={Einstein, A. and Podolsky, B. and Rosen, N.},
-  abstract={In a complete theory there is an element corresponding to each element of reality. A sufficient condition for the reality of a physical quantity is the possibility of predicting it with certainty, without disturbing the system. In quantum mechanics in the case of two physical quantities described by non-commuting operators, the knowledge of one precludes the knowledge of the other. Then either (1) the description of reality given by the wave function in quantum mechanics is not complete or (2) these two quantities cannot have simultaneous reality. Consideration of the problem of making predictions concerning a system on the basis of measurements made on another system that had previously interacted with it leads to the result that if (1) is false then (2) is also false. One is thus led to conclude that the description of reality as given by a wave function is not complete.},
-  journal={Phys. Rev.},
-  volume={47},
-  issue={10},
-  pages={777--780},
-  numpages={0},
-  year={1935},
-  month={May},
-  publisher=aps,
-  doi={10.1103/PhysRev.47.777},
-  url={http://link.aps.org/doi/10.1103/PhysRev.47.777},
-  html={https://journals.aps.org/pr/abstract/10.1103/PhysRev.47.777},
-  pdf={example_pdf.pdf},
-  altmetric={248277},
-  dimensions={true},
-  google_scholar_id={qyhmnyLat1gC},
-  selected={true}
+@article{guo2023adaptir,
+  title={AdaptIR: Parameter Efficient Multi-task Adaptation for Pre-trained Image Restoration Models},
+  author={Guo, Hang and Dai, Tao and Bai, Yuanchao and Chen, Bin and Xia, Shu-Tao and Zhu, Zexuan},
+  journal={arXiv preprint},
+  year={2023},
+  abstract={Pre-training has shown promising results on various image restoration tasks, which is usually followed by full fine-tuning for each specific downstream task (e.g., image denoising). However, such full fine-tuning usually suffers from the problems of heavy computational cost in practice, due to the massive parameters of pre-trained restoration models, thus limiting its real-world applications. Recently, Parameter Efficient Transfer Learning (PETL) offers an efficient alternative solution to full fine-tuning, yet still faces great challenges for pre-trained image restoration models, due to the diversity of different degradations. To address these issues, we propose AdaptIR, a novel parameter efficient transfer learning method for adapting pre-trained restoration models. Specifically, the proposed method consists of a multi-branch inception structure to orthogonally capture local spatial, global spatial, and channel interactions. In this way, it allows powerful representations under a very low parameter budget. Extensive experiments demonstrate that the proposed method can achieve comparable or even better performance than full fine-tuning, while only using 0.6% parameters. },
+  selected=true,
+  pdf={https://arxiv.org/pdf/2312.08881v1.pdf},
+  code={https://github.com/csguoh/AdaptIR},
 }
 
-@article{einstein1905molekularkinetischen,
-  title={{\"U}ber die von der molekularkinetischen Theorie der W{\"a}rme geforderte Bewegung von in ruhenden Fl{\"u}ssigkeiten suspendierten Teilchen},
-  author={Einstein, A.},
-  journal={Annalen der physik},
-  volume={322},
-  number={8},
-  pages={549--560},
-  year={1905},
-  publisher={Wiley Online Library}
+
+@inproceedings{guo2023lemma,
+  title     = {Towards Robust Scene Text Image Super-resolution via Explicit Location Enhancement},
+  author    = {Guo, Hang and Dai, Tao and Meng, Guanghao and Xia, Shu-Tao},
+  booktitle = {Proceedings of the International Joint Conference on
+               Artificial Intelligence (IJCAI)},
+  publisher = {International Joint Conferences on Artificial Intelligence Organization},
+  pages     = {782--790},
+  year      = {2023},
+  selected=true,
+  abstract={Scene text image super-resolution (STISR), aiming to improve image quality while boosting downstream scene text recognition accuracy, has recently achieved great success. However, most existing methods treat the foreground (character regions) and background (non-character regions) equally in the forward process, and neglect the disturbance from the complex background, thus limiting the performance. To address these issues, in this paper, we propose a novel method LEMMA that explicitly models character regions to produce high-level text-specific guidance for super-resolution. To model the location of characters effectively, we propose the location enhancement module to extract character region features based on the attention map sequence. Besides, we propose the multi-modal alignment module to perform bidirectional visual-semantic alignment to generate high-quality prior guidance, which is then incorporated into the super-resolution branch in an adaptive manner using the proposed adaptive fusion module. Experiments on TextZoom and four scene text recognition benchmarks demonstrate the superiority of our method over other state-of-the-art methods.},
+  pdf={https://arxiv.org/pdf/2307.09749.pdf},
+  code={https://github.com/csguoh/LEMMA},
 }
 
-@article{einstein1905movement,
-  abbr={Ann. Phys.},
-  title={Un the movement of small particles suspended in statiunary liquids required by the molecular-kinetic theory 0f heat},
-  author={Einstein, A.},
-  journal={Ann. Phys.},
-  volume={17},
-  pages={549--560},
-  year={1905}
+@inproceedings{guo2023one,
+  title={One-stage Low-resolution Text Recognition with High-resolution Knowledge Transfer},
+  author={Guo, Hang and Dai, Tao and Zhu, Mingyan and Meng, Guanghao and Chen, Bin and Wang, Zhi and Xia, Shu-Tao},
+  booktitle={Proceedings of the ACM International Conference on Multimedia (MM)},
+  pages={2189--2198},
+  year={2023},
+  selected=true,
+  abstract={Recognizing characters from low-resolution (LR) text images poses a significant challenge due to the information deficiency as well as the noise and blur in low-quality images. Current solutions for low-resolution text recognition (LTR) typically rely on a two-stage pipeline that involves super-resolution as the first stage followed by the second-stage recognition. Although this pipeline is straightforward and intuitive, it has to use an additional super-resolution network, which causes inefficiencies during training and testing. Moreover, the recognition accuracy of the second stage heavily depends on the reconstruction quality of the first stage, causing ineffectiveness.In this work, we attempt to address these challenges from a novel perspective: adapting the recognizer to low-resolution inputs by transferring the knowledge from the high-resolution. Guided by this idea, we propose an efficient and effective knowledge distillation framework to achieve multi-level knowledge transfer.Specifically, the visual focus loss is proposed to extract the character position knowledge with resolution gap reduction and character region focus, the semantic contrastive loss is employed to exploit the contextual semantic knowledge with contrastive learning, and the soft logits loss facilitates both local word-level and global sequence-level learning from the soft teacher label.Extensive experiments show that the proposed one-stage pipeline significantly outperforms super-resolution based two-stage frameworks in terms of effectiveness and efficiency, accompanied by favorable robustness.},
+  pdf={https://dl.acm.org/doi/abs/10.1145/3581783.3611777},
+  code={https://github.com/csguoh/KD-LTR},
 }
 
-@article{einstein1905electrodynamics,
-  title={On the electrodynamics of moving bodies},
-  author={Einstein, A.},
-  year={1905}
+
+
+@article{hu2022gaze,
+  title={Gaze target estimation inspired by interactive attention},
+  author={Hu, Zhengxi and Zhao, Kunxu and Zhou, Bohan and Guo, Hang and Wu, Shichao and Yang, Yuxue and Liu, Jingtai},
+  journal={IEEE Transactions on Circuits and Systems for Video Technology (TCSVT)},
+  volume={32},
+  number={12},
+  pages={8524--8536},
+  year={2022},
+  abstract={As an essential nonverbal cue, the human gaze reveals human intentions and plays a crucial role in human daily activities. Therefore, automatic detection of the person’s gaze target has drawn the interests of the computer vision community. This is useful not only for identifying whether children are attentive in class but also for locating items of interest to humans in retail settings. Existing gaze-following methods have only explored and exploited the scenes context and the head cues. Considering the significance of human-object interaction in understanding human intentions, we present the Visual-Spatial Graph and introduce a graph attention network to analyze the interaction probability between the human and elements in the scene. Then the interaction probability inferred from the visual-spatial information that is aggregated by the attention mechanism can be transformed into an interactive attention map that depicts the areas people care about. In addition, we construct a transformer as an encoder to integrate the features extracted by the scene and head pathways aiming to decode the gaze target. After introducing interactive attention, our proposed method achieves outstanding performance on two benchmarks: GazeFollow and VideoAttentionTarget.},
+  selected={true},
+  pdf={https://ieeexplore.ieee.org/abstract/document/9828503},
+  code={https://github.com/nkuhzx/VSG-IA},
+  publisher={IEEE}
 }
 
-@book{przibram1967letters,
-  bibtex_show={true},
-  title={Letters on wave mechanics},
-  author={Einstein, Albert and Schrödinger, Erwin and Planck, Max and Lorentz, Hendrik Antoon and Przibram, Karl},
-  year={1967},
-  publisher={Vision},
-  preview={wave-mechanics.gif}
+
+@inproceedings{guo2022mgtr,
+  title={MGTR: End-to-End Mutual Gaze Detection with Transformer},
+  author={Guo, Hang and Hu, Zhengxi and Liu, Jingtai},
+  booktitle={Proceedings of the Asian Conference on Computer Vision (ACCV)},
+  pages={1590--1605},
+  year={2022},
+  selected=true,
+  abstract={People's looking at each other or mutual gaze is ubiquitous in our daily interactions, and detecting mutual gaze is of great significance for understanding human social scenes. Current mutual gaze detection methods focus on two-stage methods, whose inference speed is limited by the two-stage pipeline and the performance in the second stage is affected by the first one. In this paper, we propose a novel one-stage mutual gaze detection framework called Mutual Gaze TRansformer or MGTR to perform mutual gaze detection in an end-to-end manner. By designing mutual gaze instance triples, MGTR can detect each human head bounding box and simultaneously infer mutual gaze relationship based on global image information, which streamlines the whole process with simplicity. Experimental results on two mutual gaze datasets show that our method is able to accelerate mutual gaze detection process without losing performance. Ablation study shows that different components of MGTR can capture different levels of semantic information in images.},
+  pdf={https://openaccess.thecvf.com/content/ACCV2022/papers/Guo_MGTR_End-to-End_Mutual_Gaze_Detection_with_Transformer_ACCV_2022_paper.pdf},
+  code={https://github.com/Gmbition/MGTR},
 }

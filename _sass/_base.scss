@@ -127,22 +127,6 @@ blockquote {
   }
 }
 
-// Checklist
-
-ul.task-list {
-  list-style-type: none; /* Remove bullets from all levels */
-}
-
-ul.task-list > li ul {
-  /* Nested lists within .task-list */
-  padding-inline-start: 1.5rem;
-}
-
-ul.task-list input[type="checkbox"] {
-  margin: 0.275rem 0.5rem 0.5rem -1rem;
-  vertical-align: middle;
-}
-
 // Math
 
 .equation {
@@ -442,7 +426,6 @@ footer.fixed-bottom {
     color: var(--global-footer-text-color);
     padding-top: 9px;
     padding-bottom: 8px;
-    text-align: center;
   }
 
   a {
@@ -460,10 +443,6 @@ footer.sticky-bottom {
   padding-top: 40px;
   padding-bottom: 40px;
   font-size: 0.9rem;
-
-  .container {
-    text-align: center;
-  }
 }
 
 // CV
@@ -694,8 +673,8 @@ footer.sticky-bottom {
 
       .preview {
         width: 100%;
-        min-width: 80px;
-        max-width: 200px;
+        min-width: 100px;
+        max-width: 250px;
       }
 
       .abbr {
