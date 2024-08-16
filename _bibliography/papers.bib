@@ -8,13 +8,39 @@
 @article{guo2024mambair,
   title={MambaIR: A Simple Baseline for Image Restoration with State-Space Model},
   author={Guo*,Hang and Li*,Jinmin and Dai,Tao and Ouyang,Zhihao and Ren, Xudong and Xia,Shu-Tao},
-  journal={arXiv preprint},
+  journal={Proceedings of the European Conference on Computer Vision (ECCV)},
   year={2024},
   abstract={Recent years have witnessed great progress in image restoration thanks to the advancements in modern deep neural networks e.g. Convolutional Neural Network and Transformer. However, existing restoration backbones are usually limited due to the inherent local reductive bias or quadratic computational complexity. Recently, Selective Structured State Space Model e.g., Mamba, have shown great potential for long-range dependencies modeling with linear complexity, but it is still under-explored in low-level computer vision. In this work, we introduce a simple but strong benchmark model, named MambaIR, for image restoration. In detail, we propose the Residual State Space Block as the core component, which employs convolution and channel attention to enhance capabilities of the vanilla Mamba. In this way, our MambaIR takes advantages of local patch recurrence prior as well as channel interaction to produce restoration-specific feature representation. Extensive experiments demonstrate the superiority of our method, for example, MambaIR outperforms Transformer-based baseline SwinIR by up to 0.36dB, using similar computational cost but with global receptive field.},
   selected=true,
   pdf={http://arxiv.org/abs/2402.15648},
   code={https://github.com/csguoh/MambaIR},
 }
+
+
+@article{zha2024lcm,
+  title={LCM: Locally Constrained Compact Point Cloud Model for Masked Point Modeling},
+  author={Zha, Yaohua and Li, Naiqi and Wang, Yanzi and Dai, Tao and Guo, Hang and Chen, Bin and Wang, Zhi and Ouyang, Zhihao and Xia, Shu-Tao},
+  journal={Arxiv},
+  year={2024},
+  abstract={The pre-trained point cloud model based on Masked Point Modeling (MPM) has exhibited substantial improvements across various tasks. However, these models heavily rely on the Transformer, leading to quadratic complexity and limited decoder, hindering their practice application. To address this limitation, we first conduct a comprehensive analysis of existing Transformer-based MPM, emphasizing the idea that redundancy reduction is crucial for point cloud analysis. To this end, we propose a Locally constrained Compact point cloud Model (LCM) consisting of a locally constrained compact encoder and a locally constrained Mamba-based decoder. Our encoder replaces self-attention with our local aggregation layers to achieve an elegant balance between performance and efficiency. Considering the varying information density between masked and unmasked patches in the decoder inputs of MPM, we introduce a locally constrained Mamba-based decoder. This decoder ensures linear complexity while maximizing the perception of point cloud geometry information from unmasked patches with higher information density. Extensive experimental results show that our compact model significantly surpasses existing Transformer-based models in both performance and efficiency, especially our LCM-based Point-MAE model, compared to the Transformer-based model, achieved an improvement of 2.24%, 0.87%, and 0.94% in performance on the three variants of ScanObjectNN while reducing parameters by 88% and computation by 73%.},
+  selected=false,
+  pdf={https://arxiv.org/pdf/2405.17149},
+  code={},
+}
+
+
+@article{wang2024ferqformer,
+  title={FreqFormer: Frequency-aware Transformer for Lightweight Image Super-resolution},
+  author={Dai, Tao and Wang, Jianping and Guo, Hang and Li, Jinmin and Wang, Jinbao and Zhu, Zexuan},
+  journal={Proceedings of the International Joint Conference on
+               Artificial Intelligence (IJCAI)},
+  year={2024},
+  abstract={Transformer-based models have been widely and successfully used in various low-vision visual tasks, and have achieved remarkable performance in single image super-resolution (SR). Despite the significant progress in SR, Transformer-based SR methods (e.g., SwinIR) still suffer from the problems of heavy computation cost and low-frequency preference, while ignoring the reconstruction of rich high-frequency information, hence hindering the representational power of Transformers. To address these issues, in this paper, we propose a novel Frequency-aware Transformer (FreqFormer) for lightweight image SR. Specifically, a Frequency Division Module (FDM) is first introduced to separately handle high- and low-frequency information in a divide-and-conquer manner. Moreover, we present Frequency-aware Transformer Block (FTB) to extracting both spatial frequency attention and channel transposed attention to recover high-frequency details. Extensive experimental results on public datasets demonstrate the superiority of our FreqFormer over state-of-the-art SR methods in terms of both quantitative metrics and visual quality.},
+  selected=true,
+  pdf={https://www.ijcai.org/proceedings/2024/0081.pdf},
+  code={https://github.com/JPWang-CS/FreqFormer},
+}
+
 
 
 @article{liu2024taming,

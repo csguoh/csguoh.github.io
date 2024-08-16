@@ -17,4 +17,4 @@ nav_order: 3
 - 2022.6: **Shiing-Shen Chern Scholarship** -- Only one per year at Nankai University, 2022
 
 
-- 2020,2021,2022: **National Scholarship**
+- 2020,2021,2022: **National Scholarship** for 3 times

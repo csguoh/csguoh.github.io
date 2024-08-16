@@ -21,13 +21,15 @@ social: true # includes social icons at the bottom of the page
 
 Hi there 👋
 
-I am a Master student at [Tsinghua Shenzhen International Grduate School (SIGS)](https://www.sigs.tsinghua.edu.cn/en/), [Tsinghua University](https://www.tsinghua.edu.cn/en/index.htm), advised by Prof. [Shu-tao Xia](https://www.sigs.tsinghua.edu.cn/xst/main.htm). Before that, I obtained my double degree of Intelligence Science and Technology B.E. & Finance B.Ec. from [Nankai University](https://en.nankai.edu.cn/). 
+I am a Master student at [Tsinghua Shenzhen International Grduate School (SIGS)](https://www.sigs.tsinghua.edu.cn/en/), [Tsinghua University](https://www.tsinghua.edu.cn/en/index.htm), advised by Prof. [Shu-tao Xia](https://www.sigs.tsinghua.edu.cn/xst/main.htm). Moreover, I also work closely with Prof. [Tao Dai](https://scholar.google.com.hk/citations?user=MqJNdaAAAAAJ&hl=zh-CN&oi=ao). Before that, I obtained my double degree of Intelligence Science and Technology B.E. & Finance B.Ec. from [Nankai University](https://en.nankai.edu.cn/). 
 
 
-My reserach interests foucus on the low-level computer vision and AIGC.
+My reserach interests foucus on:
+
+- Low-level computer vision (making the digital world more clear!), such as image resotration, super-resolution, denoising, etc.
+- Tiny machine learning (allowing AI available for everyone!), such as parameter effiiecnt fine-tuning, network quantization, knowlwdge distillation, etc.
 
 
 ### Contact
-Personal Website: [https://csguoh.github.io/](https://csguoh.github.io/)
 
 email: cshguo[at]gmail.com
