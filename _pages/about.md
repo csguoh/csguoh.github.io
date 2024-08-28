@@ -27,7 +27,7 @@ I am a Master student at [Tsinghua Shenzhen International Grduate School (SIGS)]
 My reserach interests foucus on:
 
 - **Low-level computer vision** (making the digital world more clear!), such as image resotration, super-resolution, denoising, etc.
-- **Tiny machine learning** (allowing AI available for everyone!), such as parameter effiiecnt fine-tuning, network quantization, knowlwdge distillation, etc.
+- **Tiny machine learning** (allowing AI available for everyone!), such as parameter effiiecnt fine-tuning, network quantization, knowledge distillation, etc.
 
 
 ### Contact
