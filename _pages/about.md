@@ -32,4 +32,4 @@ My reserach interests foucus on:
 
 ### contact
 
-email: cshguo[at]gmail.com
+email: cshguo[at]gmail[dot]com
