@@ -5,6 +5,66 @@
 
 
 
+
+@article{guo2024mambairv2,
+  title={MambaIRv2: Attentive State Space Restoration},
+  author={Guo*, Hang and Guo*, Yong and Zha, Yaohua and Zhang, Yulun and Li, Wenbo and Dai, Tao and Xia, Shu-Tao and Li, Yawei},
+  journal={Arxiv},
+  year={2024},
+  abstract={The Mamba-based image restoration backbones have recently demonstrated significant potential in balancing global reception and computational efficiency. However, the inherent causal modeling limitation of Mamba, where each token depends solely on its predecessors in the scanned sequence, restricts the full utilization of pixels across the image and thus presents new challenges in image restoration. In this work, we propose MambaIRv2, which equips Mamba with the non-causal modeling ability similar to ViTs to reach the attentive state space restoration model. Specifically, the proposed attentive state-space equation allows to attend beyond the scanned sequence and facilitate image unfolding with just one single scan. Moreover, we further introduce a semantic-guided neighboring mechanism to encourage interaction between distant but similar pixels. Extensive experiments show our MambaIRv2 outperforms SRFormer by even 0.35dB PSNR for lightweight SR even with 9.3% less parameters and suppresses HAT on classic SR by up to 0.29dB.},
+  selected=true,
+  pdf={https://arxiv.org/pdf/2410.21759},
+  code={https://github.com/csguoh/MambaIR},
+  preview={mambairv2.jpg},
+}
+
+
+
+
+@article{guo2024intlora,
+  title={IntLoRA: Integral Low-rank Adaptation of Quantized Diffusion Models},
+  author={Guo, Hang and Li, Yawei and Dai, Tao and Xia, Shu-Tao and Benini, Luca},
+  journal={Arxiv},
+  year={2024},
+  abstract={Fine-tuning large-scale text-to-image diffusion models for various downstream tasks has yielded impressive results. However, the heavy computational burdens of tuning large models prevent personal customization. Recent advances have attempted to employ parameter-efficient fine-tuning (PEFT) techniques to adapt the floating-point (FP) or quantized pre-trained weights. Nonetheless, the adaptation parameters in existing works are still restricted to FP arithmetic, hindering hardware-friendly acceleration. In this work, we propose IntLoRA, to further push the efficiency limits by using integer type (INT) low-rank parameters to adapt the quantized diffusion models. By working in the integer arithmetic, our IntLoRA offers three key advantages: (i) for fine-tuning, the pre-trained weights are quantized, reducing memory usage; (ii) for storage, both pre-trained and low-rank weights are in INT which consumes less disk space; (iii) for inference, IntLoRA weights can be naturally merged into quantized pre-trained weights through efficient integer multiplication or bit-shifting, eliminating additional post-training quantization. Extensive experiments demonstrate that IntLoRA can achieve performance on par with or even superior to the vanilla LoRA, accompanied by significant efficiency improvements.},
+  selected=true,
+  pdf={https://arxiv.org/pdf/2410.21759},
+  code={https://github.com/csguoh/IntLoRA},
+  preview={intlora.jpg},
+}
+
+
+@article{guo2024adaptir,
+  title={Parameter Efficient Adaptation for Image Restoration with Heterogeneous Mixture-of-Experts},
+  author={Guo, Hang and Dai, Tao and Bai, Yuanchao and Chen, Bin and Ren, Xudong and Zhu, Zexuan and Xia, Shu-Tao},
+  journal={The Annual Conference on Neural Information Processing Systems (NeurIPS)},
+  year={2024},
+  abstract={Pre-training has shown promising results on various image restoration tasks, which is usually followed by full fine-tuning for each specific downstream task (e.g., image denoising). However, such full fine-tuning usually suffers from the problems of heavy computational cost in practice, due to the massive parameters of pre-trained restoration models, thus limiting its real-world applications. Recently, Parameter Efficient Transfer Learning (PETL) offers an efficient alternative solution to full fine-tuning, yet still faces great challenges for pre-trained image restoration models, due to the diversity of different degradations. To address these issues, we propose AdaptIR, a novel parameter efficient transfer learning method for adapting pre-trained restoration models. Specifically, the proposed method consists of a multi-branch inception structure to orthogonally capture local spatial, global spatial, and channel interactions. In this way, it allows powerful representations under a very low parameter budget. Extensive experiments demonstrate that the proposed method can achieve comparable or even better performance than full fine-tuning, while only using 0.6% parameters. },
+  selected=true,
+  pdf={https://arxiv.org/pdf/2312.08881.pdf},
+  code={https://github.com/csguoh/AdaptIR},
+  abbr={NeurIPS},
+  preview={adaptir.jpg},
+}
+
+
+
+@article{guo2024refir,
+  title={ReFIR: Grounding Large Restoration Models with Retrieval Augmentation},
+  author={Guo*, Hang and Dai, Tao and Ouyang, Zhihao and Zhang, Taolin and Zha, Yaohua and Chen, Bin and Xia, Shu-Tao},
+  journal={The Annual Conference on Neural Information Processing Systems (NeurIPS)},
+  year={2024},
+  abstract={Recent advances in diffusion-based Large Restoration Models (LRMs) have significantly improved photo-realistic image restoration by leveraging the internal knowledge embedded within model weights. However, existing LRMs often suffer from the hallucination dilemma, i.e., producing incorrect contents or textures when dealing with severe degradations, due to their heavy reliance on limited internal knowledge. In this paper, we propose an orthogonal solution called the Retrieval-augmented Framework for Image Restoration (ReFIR), which incorporates retrieved images as external knowledge to extend the knowledge boundary of existing LRMs in generating details faithful to the original scene. Specifically, we first introduce the nearest neighbor lookup to retrieve content-relevant high-quality images as reference, after which we propose the cross-image injection to modify existing LRMs to utilize high-quality textures from retrieved images. Thanks to the additional external knowledge, our ReFIR can well handle the hallucination challenge and facilitate faithfully results. Extensive experiments demonstrate that ReFIR can achieve not only high-fidelity but also realistic restoration results. Importantly, our ReFIR requires no training and is adaptable to various LRMs.},
+  selected=true,
+  pdf={https://arxiv.org/pdf/2410.05601},
+  code={https://github.com/csguoh/ReFIR},
+  abbr={NeurIPS},
+  preview={refir.jpg},
+}
+
+
+
+
 @article{guo2024mambair,
   title={MambaIR: A Simple Baseline for Image Restoration with State-Space Model},
   author={Guo*,Hang and Li*,Jinmin and Dai,Tao and Ouyang,Zhihao and Ren, Xudong and Xia,Shu-Tao},
@@ -19,20 +79,9 @@
 }
 
 
-@article{zha2024lcm,
-  title={LCM: Locally Constrained Compact Point Cloud Model for Masked Point Modeling},
-  author={Zha, Yaohua and Li, Naiqi and Wang, Yanzi and Dai, Tao and Guo, Hang and Chen, Bin and Wang, Zhi and Ouyang, Zhihao and Xia, Shu-Tao},
-  journal={Arxiv},
-  year={2024},
-  abstract={The pre-trained point cloud model based on Masked Point Modeling (MPM) has exhibited substantial improvements across various tasks. However, these models heavily rely on the Transformer, leading to quadratic complexity and limited decoder, hindering their practice application. To address this limitation, we first conduct a comprehensive analysis of existing Transformer-based MPM, emphasizing the idea that redundancy reduction is crucial for point cloud analysis. To this end, we propose a Locally constrained Compact point cloud Model (LCM) consisting of a locally constrained compact encoder and a locally constrained Mamba-based decoder. Our encoder replaces self-attention with our local aggregation layers to achieve an elegant balance between performance and efficiency. Considering the varying information density between masked and unmasked patches in the decoder inputs of MPM, we introduce a locally constrained Mamba-based decoder. This decoder ensures linear complexity while maximizing the perception of point cloud geometry information from unmasked patches with higher information density. Extensive experimental results show that our compact model significantly surpasses existing Transformer-based models in both performance and efficiency, especially our LCM-based Point-MAE model, compared to the Transformer-based model, achieved an improvement of 2.24%, 0.87%, and 0.94% in performance on the three variants of ScanObjectNN while reducing parameters by 88% and computation by 73%.},
-  selected=false,
-  pdf={https://arxiv.org/pdf/2405.17149},
-  code={},
-  preview={lcm.jpg},
-}
 
 
-@article{wang2024ferqformer,
+@article{wang2024freqformer,
   title={FreqFormer: Frequency-aware Transformer for Lightweight Image Super-resolution},
   author={Dai, Tao and Wang, Jianping and Guo, Hang and Li, Jinmin and Wang, Jinbao and Zhu, Zexuan},
   journal={Proceedings of the International Joint Conference on
@@ -59,17 +108,9 @@
   preview={latta.jpg},
 }
 
-@article{guo2023adaptir,
-  title={AdaptIR: Parameter Efficient Multi-task Adaptation for Pre-trained Image Restoration Models},
-  author={Guo, Hang and Dai, Tao and Bai, Yuanchao and Chen, Bin and Xia, Shu-Tao and Zhu, Zexuan},
-  journal={arXiv preprint},
-  year={2023},
-  abstract={Pre-training has shown promising results on various image restoration tasks, which is usually followed by full fine-tuning for each specific downstream task (e.g., image denoising). However, such full fine-tuning usually suffers from the problems of heavy computational cost in practice, due to the massive parameters of pre-trained restoration models, thus limiting its real-world applications. Recently, Parameter Efficient Transfer Learning (PETL) offers an efficient alternative solution to full fine-tuning, yet still faces great challenges for pre-trained image restoration models, due to the diversity of different degradations. To address these issues, we propose AdaptIR, a novel parameter efficient transfer learning method for adapting pre-trained restoration models. Specifically, the proposed method consists of a multi-branch inception structure to orthogonally capture local spatial, global spatial, and channel interactions. In this way, it allows powerful representations under a very low parameter budget. Extensive experiments demonstrate that the proposed method can achieve comparable or even better performance than full fine-tuning, while only using 0.6% parameters. },
-  selected=true,
-  pdf={https://arxiv.org/pdf/2312.08881v1.pdf},
-  code={https://github.com/csguoh/AdaptIR},
-  preview={adaptir.jpg},
-}
+
+
+
 
 
 @inproceedings{guo2023lemma,
