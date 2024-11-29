@@ -49,6 +49,9 @@
   <div id="{{ entry.key }}" class="{% if site.enable_publication_thumbnails %}col-sm-8{% else %}col-sm-10{% endif %}">
     <!-- Title -->
     <div class="title">{{ entry.title }}</div>
+    {% if entry.highlight %}
+        <strong style="border-width:2px; border-style:solid;color:red;padding:0.1em">{{ entry.highlight }}</strong>
+    {%- endif %}
     <!-- Author -->
     <div class="author">
       {% assign author_array_size = entry.author_array | size %}
@@ -215,6 +218,10 @@
       {% if entry.website %}
         <a href="{{ entry.website }}" class="btn btn-sm z-depth-0" role="button">Website</a>
       {% endif %}
+
+      {% if entry.repostar %}
+          <a href="https://github.com/{{entry.repostar}}"> <img alt="GitHub Repo stars" src="https://img.shields.io/github/stars/{{entry.repostar}}"> </a>
+      {%- endif %}
     </div>
     {% if site.enable_publication_badges %}
       {% assign entry_has_altmetric_badge = entry.altmetric or entry.doi or  entry.eprint or entry.pmid or entry.isbn %}
