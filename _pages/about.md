@@ -35,7 +35,7 @@ My research interests focus on:
 <div class="alert alert-info" style="max-width: 660px; color: #5445b4; background-color: #F0F8FF;">
 <span style="color: #5445b4;">
 <b>Looking for Academic Collaboration!</b> <br>
-If you are interested in working with me, feel free to drop me your CV 🤗.
+If you are interested in working with me, feel free to drop an email. I can provide related idea as well as weekly discussion 🤗.
 </span>
 </div>
 
