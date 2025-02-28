@@ -21,7 +21,7 @@ social: true # includes social icons at the bottom of the page
 
 Hi, there 👋
 
-I am a Master student at [Tsinghua Shenzhen International Graduate School (SIGS)](https://www.sigs.tsinghua.edu.cn/en/), [Tsinghua University](https://www.tsinghua.edu.cn/en/index.htm), advised by Prof. [Shu-tao Xia](https://www.sigs.tsinghua.edu.cn/xst/main.htm). I also work closely with Prof. [Tao Dai](https://scholar.google.com.hk/citations?user=MqJNdaAAAAAJ&hl=zh-CN&oi=ao). Before that, I obtained my dual degree of B.Eng. & B.Ec. from [Nankai University](https://en.nankai.edu.cn/). 
+I am a Master student at [Tsinghua Shenzhen International Graduate School (SIGS)](https://www.sigs.tsinghua.edu.cn/en/), [Tsinghua University](https://www.tsinghua.edu.cn/en/index.htm), advised by Prof. [Shu-tao Xia](https://www.sigs.tsinghua.edu.cn/xst_en/main.htm). I also work closely with Prof. [Tao Dai](https://scholar.google.com.hk/citations?user=MqJNdaAAAAAJ&hl=zh-CN&oi=ao) and Prof. [Yawei Li](https://yaweili.bitbucket.io/). Before that, I obtained my dual degree of B.Eng. & B.Ec. from [Nankai University](https://en.nankai.edu.cn/). 
 
 
 My research interests focus on:
@@ -34,8 +34,8 @@ My research interests focus on:
 
 <div class="alert alert-info" style="max-width: 660px; color: #5445b4; background-color: #F0F8FF;">
 <span style="color: #5445b4;">
-<b>Looking for Academic Collaboration!</b> <br>
-If you are interested in working with me, feel free to drop an email. I can provide related idea as well as weekly discussion 🤗.
+<b>Looking for PhD Position!</b> <br>
+I am actively seeking a PhD position or an academic internship. If you are interested, feel free to contact me.🤗.
 </span>
 </div>
 
@@ -51,9 +51,27 @@ email: cshguo[at]gmail[dot]com
   <div class="table-responsive" style="max-height: 16vw">
     <table class="table table-sm table-borderless">
       <tr>
+        <th scope="row" style="width: 150px;">Feb 27, 2025</th>
+        <td>
+        Congrats! Our MambaIRv2 has been accepted by  <strong>CVPR2025</strong>!
+        </td>
+      </tr> 
+      <tr>
+        <th scope="row" style="width: 150px;">Feb 08, 2025</th>
+        <td>
+        We are organizing the <a href="https://www.cvlai.net/ntire/2025/" target="_blank"><b>NTIRE 2025 Challenge</b></a> on <a href="https://codalab.lisn.upsaclay.fr/competitions/21560" target="_blank"><b> Image Denosing</b></a>. 
+        </td>
+      </tr> 
+      <tr>
+        <th scope="row" style="width: 150px;">Feb 07, 2025</th>
+        <td>
+        We are organizing the <a href="https://www.cvlai.net/ntire/2025/" target="_blank"><b>NTIRE 2025 Challenge</b></a> on  <a href="https://codalab.lisn.upsaclay.fr/competitions/21620" target="_blank"><b>Efficient Super-Resolution</b></a>. 
+        </td>
+      </tr> 
+      <tr>
         <th scope="row" style="width: 150px;">Dec 22, 2024</th>
         <td>
-          Our work CALF, which explores the potential of LLMs for time series forecasting, has been accepted by <strong>AAAI2025</strong>!
+          Our work CALF, a LLM-based time series foundation models, has been accepted by <strong>AAAI2025</strong>!
         </td>
       </tr> 
       <tr>
