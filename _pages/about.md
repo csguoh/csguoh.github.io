@@ -34,7 +34,7 @@ My research interests focus on:
 
 <div class="alert alert-info" style="max-width: 660px; color: #5445b4; background-color: #F0F8FF;">
 <span style="color: #5445b4;">
-<b>Looking for PhD Position!</b> <br>
+<b>Looking for a PhD Position!</b> <br>
 I am actively seeking a PhD position or an academic internship. If you are interested, feel free to contact me.🤗.
 </span>
 </div>
