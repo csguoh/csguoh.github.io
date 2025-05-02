@@ -44,12 +44,30 @@ I am actively seeking a PhD position or an academic internship. If you are inter
 
 email: cshguo[at]gmail[dot]com
 
-
+*(Last Update: 2025-05-02)*
 
 ### News
 <div class="news">
   <div class="table-responsive" style="max-height: 16vw">
     <table class="table table-sm table-borderless">
+      <tr>
+        <th scope="row" style="width: 150px;">May 02, 2025</th>
+        <td>
+        Our IntLoRA has been accepted by  <strong>ICML2025</strong>! Check our paper <a href="https://arxiv.org/abs/2410.21759" target="_blank"><b>here</b></a> :D
+        </td>
+      </tr> 
+      <tr>
+        <th scope="row" style="width: 150px;">Apr 29, 2025</th>
+        <td>
+        Two papers have been accepted by  <strong>IJCAI2025</strong>.
+        </td>
+      </tr> 
+      <tr>
+        <th scope="row" style="width: 150px;">Mar 28, 2025</th>
+        <td>
+        We release <a href="https://github.com/csguoh/FastVAR" target="_blank"><b>FastVAR</b></a>, a new cached token pruning method for <strong>2.7x faster</strong> Visual Auto-regressive Modeling.
+        </td>
+      </tr> 
       <tr>
         <th scope="row" style="width: 150px;">Feb 27, 2025</th>
         <td>
@@ -59,13 +77,13 @@ email: cshguo[at]gmail[dot]com
       <tr>
         <th scope="row" style="width: 150px;">Feb 08, 2025</th>
         <td>
-        We are organizing the <a href="https://www.cvlai.net/ntire/2025/" target="_blank"><b>NTIRE 2025 Challenge</b></a> on <a href="https://codalab.lisn.upsaclay.fr/competitions/21560" target="_blank"><b> Image Denosing</b></a>. 
+        We are organizing the CVPR25 Workshop <a href="https://www.cvlai.net/ntire/2025/" target="_blank"><b>NTIRE 2025 Challenge</b></a> on <a href="https://codalab.lisn.upsaclay.fr/competitions/21560" target="_blank"><b> Image Denosing</b></a>. 
         </td>
       </tr> 
       <tr>
         <th scope="row" style="width: 150px;">Feb 07, 2025</th>
         <td>
-        We are organizing the <a href="https://www.cvlai.net/ntire/2025/" target="_blank"><b>NTIRE 2025 Challenge</b></a> on  <a href="https://codalab.lisn.upsaclay.fr/competitions/21620" target="_blank"><b>Efficient Super-Resolution</b></a>. 
+        We are organizing the CVPR25 Workshop <a href="https://www.cvlai.net/ntire/2025/" target="_blank"><b>NTIRE 2025 Challenge</b></a> on  <a href="https://codalab.lisn.upsaclay.fr/competitions/21620" target="_blank"><b>Efficient Super-Resolution</b></a>. 
         </td>
       </tr> 
       <tr>
@@ -125,5 +143,6 @@ email: cshguo[at]gmail[dot]com
     </table>
   </div> 
 </div>
+
 
 

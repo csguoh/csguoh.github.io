@@ -6,6 +6,25 @@
 
 
 
+
+@article{guo2025fastvar,
+  title={FastVAR: Linear Visual Autoregressive Modeling via Cached Token Pruning},
+  author={Guo, Hang and Li, Yawei and Zhang, Taolin and Wang, Jiangshan and Dai, Tao and Xia, Shu-Tao and Benini, Luca},
+  journal={Preprint},
+  year={2025},
+  abstract={Visual Autoregressive (VAR) modeling has gained popularity for its shift towards next-scale prediction. However, existing VAR paradigms process the entire token map at each scale step, leading to the complexity and runtime scaling dramatically with image resolution. To address this challenge, we propose FastVAR, a post-training acceleration method for efficient resolution scaling with VARs. Our key finding is that the majority of latency arises from the large-scale step where most tokens have already converged. Leveraging this observation, we develop the cached token pruning strategy that only forwards pivotal tokens for scale-specific modeling while using cached tokens from previous scale steps to restore the pruned slots. This significantly reduces the number of forwarded tokens and improves the efficiency at larger resolutions. Experiments show the proposed FastVAR can further speedup FlashAttention-accelerated VAR by 2.7 with negligible performance drop of <1%. We further extend FastVAR to zero-shot generation of higher resolution images. In particular, FastVAR can generate one 2K image with 15GB memory footprints in 1.5s on a single NVIDIA 3090 GPU. Code is available at https://github.com/csguoh/FastVAR.}, 
+  selected=true,
+  pdf={https://arxiv.org/pdf/2503.23367},
+  code={https://github.com/csguoh/FastVAR},
+  preview={fastvar.jpg},
+  repostar = {csguoh/FastVAR},
+  bibtex_show = {true},
+  abbr={Preprint},
+}
+
+
+
+
 @article{guo2024mambairv2,
   title={MambaIRv2: Attentive State Space Restoration},
   author={Guo*, Hang and Guo*, Yong and Zha, Yaohua and Zhang, Yulun and Li, Wenbo and Dai, Tao and Xia, Shu-Tao and Li, Yawei},
@@ -28,15 +47,16 @@
 @article{guo2024intlora,
   title={IntLoRA: Integral Low-rank Adaptation of Quantized Diffusion Models},
   author={Guo, Hang and Li, Yawei and Dai, Tao and Xia, Shu-Tao and Benini, Luca},
-  journal={Arxiv},
-  year={2024},
+  journal={The International Conference on Machine Learning (ICML)},
+  year={2025},
   abstract={Fine-tuning large-scale text-to-image diffusion models for various downstream tasks has yielded impressive results. However, the heavy computational burdens of tuning large models prevent personal customization. Recent advances have attempted to employ parameter-efficient fine-tuning (PEFT) techniques to adapt the floating-point (FP) or quantized pre-trained weights. Nonetheless, the adaptation parameters in existing works are still restricted to FP arithmetic, hindering hardware-friendly acceleration. In this work, we propose IntLoRA, to further push the efficiency limits by using integer type (INT) low-rank parameters to adapt the quantized diffusion models. By working in the integer arithmetic, our IntLoRA offers three key advantages: (i) for fine-tuning, the pre-trained weights are quantized, reducing memory usage; (ii) for storage, both pre-trained and low-rank weights are in INT which consumes less disk space; (iii) for inference, IntLoRA weights can be naturally merged into quantized pre-trained weights through efficient integer multiplication or bit-shifting, eliminating additional post-training quantization. Extensive experiments demonstrate that IntLoRA can achieve performance on par with or even superior to the vanilla LoRA, accompanied by significant efficiency improvements.},
-  selected=false,
+  selected=true,
   pdf={https://arxiv.org/pdf/2410.21759},
   code={https://github.com/csguoh/IntLoRA},
   bibtex_show = {true},
   preview={intlora.jpg},
   repostar={csguoh/IntLoRA},
+  abbr={ICML},
 }
 
 
@@ -59,7 +79,7 @@
 
 @article{guo2024refir,
   title={ReFIR: Grounding Large Restoration Models with Retrieval Augmentation},
-  author={Guo*, Hang and Dai, Tao and Ouyang, Zhihao and Zhang, Taolin and Zha, Yaohua and Chen, Bin and Xia, Shu-Tao},
+  author={Guo, Hang and Dai, Tao and Ouyang, Zhihao and Zhang, Taolin and Zha, Yaohua and Chen, Bin and Xia, Shu-Tao},
   journal={The Annual Conference on Neural Information Processing Systems (NeurIPS)},
   year={2024},
   abstract={Recent advances in diffusion-based Large Restoration Models (LRMs) have significantly improved photo-realistic image restoration by leveraging the internal knowledge embedded within model weights. However, existing LRMs often suffer from the hallucination dilemma, i.e., producing incorrect contents or textures when dealing with severe degradations, due to their heavy reliance on limited internal knowledge. In this paper, we propose an orthogonal solution called the Retrieval-augmented Framework for Image Restoration (ReFIR), which incorporates retrieved images as external knowledge to extend the knowledge boundary of existing LRMs in generating details faithful to the original scene. Specifically, we first introduce the nearest neighbor lookup to retrieve content-relevant high-quality images as reference, after which we propose the cross-image injection to modify existing LRMs to utilize high-quality textures from retrieved images. Thanks to the additional external knowledge, our ReFIR can well handle the hallucination challenge and facilitate faithfully results. Extensive experiments demonstrate that ReFIR can achieve not only high-fidelity but also realistic restoration results. Importantly, our ReFIR requires no training and is adaptable to various LRMs.},
@@ -121,11 +141,10 @@
   selected=true,
   pdf={https://arxiv.org/html/2403.07300v1},
   code={https://github.com/Hank0626/LLaTA},
+  repostar={Hank0626/LLaTA},
   bibtex_show = {true},
   preview={latta.jpg},
 }
-
-
 
 
 
