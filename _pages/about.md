@@ -30,8 +30,6 @@ My research interests focus on:
 - **Efficient Artificial Intelligence**: trying to allow AI available for everyone, such as parameter efficient fine-tuning, network quantization, sparsity, distillation, etc.
 
 
-
-
 <div class="alert alert-info" style="max-width: 660px; color: #5445b4; background-color: #F0F8FF;">
 <span style="color: #5445b4;">
 <b>Looking for a PhD Position!</b> <br>
@@ -44,12 +42,24 @@ I am actively seeking a PhD position or an academic internship. If you are inter
 
 email: cshguo[at]gmail[dot]com
 
-*(Last Update: 2025-05-02)*
+*(Last Update: 2025-06-27)*
 
 ### News
 <div class="news">
   <div class="table-responsive" style="max-height: 16vw">
     <table class="table table-sm table-borderless">
+      <tr>
+        <th scope="row" style="width: 150px;">June 26, 2025</th>
+        <td>
+        Our <a href="https://github.com/csguoh/FastVAR" target="_blank"><b>FastVAR</b></a> has been accepted by ICCV25🥳.
+        </td>
+      </tr> 
+      <tr>
+        <th scope="row" style="width: 150px;">June 03, 2025</th>
+        <td>
+        I start my summer internship at <a href="https://www.epfl.ch/en/" target="_blank"><b>EPFL</b></a> in Lausanne:D 
+        </td>
+      </tr> 
       <tr>
         <th scope="row" style="width: 150px;">May 02, 2025</th>
         <td>

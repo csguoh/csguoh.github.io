@@ -10,7 +10,7 @@
 @article{guo2025fastvar,
   title={FastVAR: Linear Visual Autoregressive Modeling via Cached Token Pruning},
   author={Guo, Hang and Li, Yawei and Zhang, Taolin and Wang, Jiangshan and Dai, Tao and Xia, Shu-Tao and Benini, Luca},
-  journal={Preprint},
+  journal={The IEEE International Conference on Computer Vision (ICCV)},
   year={2025},
   abstract={Visual Autoregressive (VAR) modeling has gained popularity for its shift towards next-scale prediction. However, existing VAR paradigms process the entire token map at each scale step, leading to the complexity and runtime scaling dramatically with image resolution. To address this challenge, we propose FastVAR, a post-training acceleration method for efficient resolution scaling with VARs. Our key finding is that the majority of latency arises from the large-scale step where most tokens have already converged. Leveraging this observation, we develop the cached token pruning strategy that only forwards pivotal tokens for scale-specific modeling while using cached tokens from previous scale steps to restore the pruned slots. This significantly reduces the number of forwarded tokens and improves the efficiency at larger resolutions. Experiments show the proposed FastVAR can further speedup FlashAttention-accelerated VAR by 2.7 with negligible performance drop of <1%. We further extend FastVAR to zero-shot generation of higher resolution images. In particular, FastVAR can generate one 2K image with 15GB memory footprints in 1.5s on a single NVIDIA 3090 GPU. Code is available at https://github.com/csguoh/FastVAR.}, 
   selected=true,
@@ -19,7 +19,7 @@
   preview={fastvar.jpg},
   repostar = {csguoh/FastVAR},
   bibtex_show = {true},
-  abbr={Preprint},
+  abbr={ICCV},
 }
 
 
