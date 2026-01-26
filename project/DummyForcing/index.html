@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-55V1E709SK"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-55V1E709SK');
+  </script>
+  <meta charset="utf-8">
+  <meta name="description" content="Dummy Forcing: Efficient Autoregressive Video Diffusion with Dummy Head">
+  <meta name="keywords" content="Autoregressive Video Diffusion, Video Generation, Cache Pruning">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dummy Forcing: Efficient Autoregressive Video Diffusion with Dummy Head</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+  <script src="./static/js/script.js"></script>
+
+  <style>
+    .video-comparison {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      margin-bottom: 30px;
+    }
+    .video-item {
+      flex: 1;
+      max-width: 45%;
+    }
+    .video-item video {
+      width: 100%;
+      height: auto;
+    }
+    .video-title {
+      text-align: center;
+      margin-bottom: 10px;
+      font-weight: 600;
+    }
+    .speedup-green {
+      color: #22c55e;
+      font-weight: 700;
+    }
+    .single-video {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    .single-video video {
+      width: 80%;
+      max-width: 800px;
+    }
+    .video-caption {
+      color: #888;
+      font-size: 0.9em;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-2 publication-title">
+              <span style="color:#6c5da6; font-weight:700; font-size:1.4em;">
+                Dummy Forcing
+              </span><br>
+              <span style="font-size:0.9em; color:#555;">
+                Efficient Autoregressive Video Diffusion with Dummy Head
+              </span>
+            </h1>
+
+            <div class="is-size-5 publication-authors">
+              <span class="author-block">  
+                <a href="https://csguoh.github.io/">Hang Guo</a><sup>1,2</sup>, 
+                <a href="https://scholar.google.com/citations?user=ObkbCWkAAAAJ">Zhaoyang Jia</a><sup>2,3</sup>, 
+                <a href="https://scholar.google.com/citations?user=AcOcw0AAAAAJ">Jiahao Li</a><sup>2</sup>, 
+                <a href="https://scholar.google.com/citations?user=rxZn4g0AAAAJ">Bin Li</a><sup>2</sup>, 
+                <a href="https://caiyuanhao1998.github.io/">Yuanhao Cai</a><sup>4</sup>, 
+                <br>
+                <a href="https://scholar.google.com/citations?user=HoKoCv0AAAAJ">Jiangshan Wang</a><sup>1</sup>, 
+                <a href="https://ofsoundof.github.io/">Yawei Li</a><sup>5</sup>, 
+                <a href="https://scholar.google.com/citations?user=djk5l-4AAAAJ">Yan Lu</a><sup>2</sup>
+              </span>
+            </div>
+
+            <div class="subtitle is-size-5">
+              <sup>1</sup> Tsinghua University &nbsp; 
+              <sup>2</sup> Microsoft Research Asia &nbsp; 
+              <sup>3</sup> University of Science and Technology of China&nbsp;  
+              <br>
+              <sup>4</sup> Johns Hopkins University &nbsp; 
+              <sup>5</sup> ETH Zurich &nbsp;
+            </div>
+
+            <div class="column has-text-centered">
+              <span class="link-block">
+                <a href="xxx" class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="xxx" class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                </a>
+              </span>
+            </div>
+
+
+          <div class="text-container">
+            <h2 class="subtitle has-text-centered" style="color: #b02418;">
+              <b>A simple yet effective KV cache pruning method for 24FPS+ video generation</b>
+            </h2>
+          </div>
+
+          <br>
+          <h2 class="title is-3 has-text-left">Overview</h2>
+          <div class="video-container has-text-centered">
+            <video width="800" controls loop muted playsinline>
+              <source src="static/videos/video_presentation.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          
+          <br><br>
+          <h2 class="title is-3 has-text-left">Highlights</h2>
+          <img src="./static/images/highlight.jpg">
+          <p>The proposed method can be applied to (1) efficiently generate videos, (2) overcome quadratic complexity in high-resolution video generation, and (3) scale cache lengths without increasing computational overhead. </p>
+          <br>
+          
+
+          <br>
+          <h2 class="title is-3 has-text-left">Key Findings</h2>
+          <h3 class="subtitle is-5 has-text-left has-text-weight-bold has-text-black">1️⃣ Certain heads under-utilize past context</h3>
+          <img src="./static/images/finding1.jpg">
+          <p>About 25% heads assign over 80% attention score to current frames, and we call these heads as "dummy heads"</p>
+          <br>
+          <h3 class="subtitle is-5 has-text-left has-text-weight-bold has-text-black">2️⃣ Dummy head exhibits position stability</h3>
+          <img src="./static/images/finding2.jpg" width="400">
+          <p>The dummy head index exhibits strong stability acorss varying conditions, e.g., prompts, AR steps, and denoising times.</p>
+          <br>
+          <h3 class="subtitle is-5 has-text-left has-text-weight-bold has-text-black">3️⃣ Pruning cache of dummy heads incurs only slight drop</h3>
+          <img src="./static/images/finding3.jpg" width="600">
+          <p>Removing all KV cache of these dummy heads incurs only slightly performance drop while delivering speedup.</p>
+
+          <br><br>
+          <h2 class="title is-3 has-text-left">Generation Results</h2>
+          <br>
+
+          <h3 class="subtitle is-5 has-text-left has-text-weight-bold has-text-black">1️⃣ 5-second Short Video Generation</h3>
+          
+          <div class="video-comparison">
+            <div class="video-item">
+              <div class="video-title">Self Forcing - 17.6FPS</div>
+              <video controls autoplay loop muted playsinline>
+                <source src="./static/videos/short_video/0_prev.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class="video-item">
+              <div class="video-title">Ours - 24.3FPS (<span class="speedup-green">1.4x speedup</span>)</div>
+              <video controls autoplay loop muted playsinline>
+                <source src="./static/videos/short_video/0_ours.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+          <div class="video-caption" style="text-align: center; margin-top: -20px; margin-bottom: 30px;">A cheerful and playful Corgi running and frolicking in a sunlit park during the golden hour of sunset. The Corgi has a fluffy tail and perky ears, wagging happily as it runs through the grassy field. The sky is painted with warm hues of orange and pink, casting a soft glow over the greenery. In the background, there are families enjoying their leisure time, children playing, and couples walking hand in hand. Medium shot capturing the joyful energy of the Corgi amidst the serene park atmosphere.</div>
+
+
+
+          <div class="video-comparison">
+            <div class="video-item">
+              <video controls autoplay loop muted playsinline>
+                <source src="./static/videos/short_video/1_prev.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class="video-item">
+              <video controls autoplay loop muted playsinline>
+                <source src="./static/videos/short_video/1_ours.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+          <div class="video-caption" style="text-align: center; margin-top: -20px; margin-bottom: 30px;">A dynamic snowboarding sequence set against a stunning winter landscape. A young, athletic snowboarder performs an impressive trick mid-air, showcasing their skills with fluid movements and exhilarating speed. The boarder is dressed in vibrant snow gear, including a neon jacket and helmet. The background highlights a snowy mountain slope with pine trees and a clear blue sky above. The camera follows the action from a low-angle perspective, capturing the thrill and momentum of the snowboarding run. Medium shot focusing on the snowboarder during the jump.</div>
+
+
+
+          <div class="video-comparison">
+            <div class="video-item">
+              <video controls autoplay loop muted playsinline>
+                <source src="./static/videos/short_video/2_prev.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class="video-item">
+              <video controls autoplay loop muted playsinline>
+                <source src="./static/videos/short_video/2_ours.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+          <div class="video-caption" style="text-align: center; margin-top: -20px; margin-bottom: 30px;">A high-speed action scene featuring a sleek black motorcycle accelerating down a winding asphalt road. The motorcycle's engine roars as it gains speed, smoke trailing from the tires. The rider, wearing a black leather jacket and helmet, leans forward with intense focus. The background shows blurred trees and distant hills, emphasizing the speed. The camera follows the motorcycle closely, capturing every detail of the bike and rider as they accelerate. Close-up shot, dynamic camera movement tracking the motorcycle.</div>
+
+
+
+          <div class="video-comparison">
+            <div class="video-item">
+              <video controls autoplay loop muted playsinline>
+                <source src="./static/videos/short_video/3_prev.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class="video-item">
+              <video controls autoplay loop muted playsinline>
+                <source src="./static/videos/short_video/3_ours.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+          <div class="video-caption" style="text-align: center; margin-top: -20px; margin-bottom: 30px;">A dynamic and intense scene of two medieval knights engaging in sword fighting in a spacious, dimly lit arena. Both knights are fully armored with shining steel plate armor and wield large, ornate swords. They move gracefully yet powerfully, their swords clashing with sparks flying. One knight has a determined look, while the other appears focused and alert. The background includes spectators in period clothing, cheering from the stands, and banners hanging from the walls. The camera captures the action in a close-up, following the swift movements and dramatic swings of the swords.</div>
+
+
+          <br><br>
+          <h3 class="subtitle is-5 has-text-left has-text-weight-bold has-text-black">2️⃣ 30-second Long Video Generation</h3>
+
+          <div class="video-comparison">
+            <div class="video-item">
+              <div class="video-title">LongLive - 17.6FPS</div>
+              <video controls autoplay loop muted playsinline>
+                <source src="./static/videos/long_video/0_prev.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class="video-item">
+              <div class="video-title">Ours - 24.3FPS (<span class="speedup-green">1.4x speedup</span>)</div>
+              <video controls autoplay loop muted playsinline>
+                <source src="./static/videos/long_video/0_ours.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+          <div class="video-caption" style="text-align: center; margin-top: -20px; margin-bottom: 30px;">A stylish woman strolls down a bustling Tokyo street, the warm glow of neon lights and animated city signs casting vibrant reflections. She wears a sleek black leather jacket paired with a flowing red dress and black boots, her black purse slung over her shoulder. Sunglasses perched on her nose and a bold red lipstick add to her confident, casual demeanor. The street is damp and reflective, creating a mirror-like effect that enhances the colorful lights and shadows. Pedestrians move about, adding to the lively atmosphere. The scene is captured in a dynamic medium shot with the woman walking slightly to one side, highlighting her graceful strides.</div>
+
+
+
+          <div class="video-comparison">
+            <div class="video-item">
+              <video controls autoplay loop muted playsinline>
+                <source src="./static/videos/long_video/1_prev.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class="video-item">
+              <video controls autoplay loop muted playsinline>
+                <source src="./static/videos/long_video/1_ours.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+          <div class="video-caption" style="text-align: center; margin-top: -20px; margin-bottom: 30px;">A subtle and elegant photograph in a Japanese style, capturing a woman with gentle, contemplative eyes and flowing dark hair sitting by the window of a high-speed train. The train moves rapidly through a bustling cityscape, with blurred reflections of the city lights and buildings on the window pane. The woman appears serene, her hands resting gently on her lap. The background features a blend of traditional Japanese architecture and modern skyscrapers, with a soft, muted color palette. The photo has a vintage film texture, emphasizing the movement and energy of the scene. A medium shot from a slightly angled perspective, highlighting the woman's thoughtful gaze and the dynamic motion of the train.</div>
+
+
+          <div class="video-comparison">
+            <div class="video-item">
+              <video controls autoplay loop muted playsinline>
+                <source src="./static/videos/long_video/2_prev.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class="video-item">
+              <video controls autoplay loop muted playsinline>
+                <source src="./static/videos/long_video/2_ours.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+          <div class="video-caption" style="text-align: center; margin-top: -20px; margin-bottom: 30px;">A dynamic tracking shot in the style of a classic Hollywood film, capturing a steam locomotive chugging through a snowy landscape. The train moves forward with a sense of urgency, the camera following closely behind to highlight the speed and power of the journey. Snowflakes swirl around the train, creating a sense of movement and cold. The scenery changes rapidly, revealing dense forests, winding tracks, and distant mountains covered in snow. The background features blurred snow-covered trees and distant hills, with patches of sunlight breaking through the clouds. The train’s smokestack releases billowing steam, adding to the dramatic effect. A wide-angle lens captures the expansive view, emphasizing the vastness of the snowy wilderness.</div>
+
+
+
+          <br><br>
+          <h3 class="subtitle is-5 has-text-left has-text-weight-bold has-text-black">3️⃣ High-resolution Video Generation</h3>
+          <p class="has-text-left" style="font-size: 1rem;">  Dummy Forcing supports 720P and even 1080P video generation with up to <b>2.0x</b> speedup. The following are 1080P high-resolution videos generated with our method.</p>
+          <br> 
+
+          <div class="single-video">
+            <video controls autoplay loop muted playsinline>
+              <source src="./static/videos/high_res/0.mp4" type="video/mp4">
+            </video>
+            <div class="video-caption">A cinematic scene from a classic western movie, featuring a rugged man riding a powerful horse through the vast Gobi Desert at sunset. The man, dressed in a dusty cowboy hat and a worn leather jacket, reins tightly on the horse's neck as he gallops across the golden sands. The sun sets dramatically behind them, casting long shadows and warm hues across the landscape. The background is filled with rolling dunes and sparse, rocky outcrops, emphasizing the harsh beauty of the desert. A dynamic wide shot from a low angle, capturing both the man and the expansive desert vista.</div>
+          </div>
+
+          <div class="single-video">
+            <video controls autoplay loop muted playsinline>
+              <source src="./static/videos/high_res/1.mp4" type="video/mp4">
+            </video>
+            <div class="video-caption">A dramatic post-apocalyptic scene in the style of a horror film, featuring a skeleton wearing a colorful flower hat and oversized sunglasses dancing wildly in a sunlit meadow at sunset. The skeleton has a weathered and somewhat decayed appearance, with bones visible through tattered remnants of clothing. The dance is energetic and almost comical, with exaggerated movements. The background is a vivid blend of warm oranges and pinks, with tall grasses and wildflowers swaying in the breeze. The sky is painted with rich hues of orange and pink, casting long shadows across the landscape. A dynamic medium shot from a low angle, capturing the skeleton's animated dance.</div>
+          </div>
+
+          <div class="single-video">
+            <video controls autoplay loop muted playsinline>
+              <source src="./static/videos/high_res/2.mp4" type="video/mp4">
+            </video>
+            <div class="video-caption">A dynamic action scene in a modern gym, featuring a kangaroo wearing boxing gloves, engaged in an intense sparring session with a punching bag. The kangaroo has a muscular build and is positioned mid-punch, its front legs wrapped in red boxing gloves, eyes focused intently on the target. The background showcases a cluttered gym with heavy equipment and mats, creating a vivid and realistic setting. The kangaroo's movements are fluid and powerful, conveying both agility and strength. The scene captures a split-second moment of mid-action, with the kangaroo's tail swaying behind it. A high-angle shot emphasizing the kangaroo's dynamic pose and the surrounding gym environment.</div>
+          </div>
+
+          <br><br>
+          <h3 class="subtitle is-5 has-text-left has-text-weight-bold has-text-black">4️⃣ Long-context Video Generation</h3>
+          <p class="has-text-left" style="font-size: 1rem;">  To evaluate the model's long-context memory, we employ an "A->B->A" shot transition, where we aim for the third shot to accurately reproduce the identities from the first shot. See our paper for more details.</p>
+          <br> 
+          
+          <div class="single-video">
+            <video controls autoplay loop muted playsinline style="width: 60%;">
+              <source src="./static/videos/long_context/0.mp4" type="video/mp4">
+            </video>
+            <!-- Text Prompts (Collapsible) -->
+            <details class="text-prompts">
+              <summary class="expand-btn">Click to expand text prompts</summary>
+
+              <p class="prompt-line">
+                <b>Prompt 1:</b> A cheerful, happy Corgi playing in a futuristic park during sunset, set in a cyberpunk style. The Corgi has a playful expression, wagging its tail and running around in the grass. The park is illuminated by neon lights and surrounded by towering skyscrapers with holographic advertisements flashing on their surfaces. The sky is a blend of orange and purple hues, creating a striking contrast against the dark cityscape. The Corgi is in the foreground, while the vibrant city lights and buildings create a dynamic background. The scene captures the essence of a cyberpunk world with natural elements intertwined. Medium close-up shot focusing on the Corgi's joyful playfulness. The camera angle is slightly elevated, providing a clear view of the Corgi and the surrounding environment.
+              </p>
+
+              <p class="prompt-line">
+                <b>Prompt 2:</b> A bustling street market at night in a futuristic city. Vendors sell exotic foods and gadgets under the glow of colorful neon signs. Shoppers navigate through narrow, crowded alleys filled with the sounds of chatter and the smells of street food. Holographic advertisements float above the stalls, and drones zip through the air delivering packages. The street is lit by a mix of warm and cool lights, creating a vibrant and lively atmosphere. The scene captures the energy and diversity of a cyberpunk marketplace. Wide shot showing the bustling crowd and the detailed environment.
+              </p>
+
+              <p class="prompt-line">
+                <b>Prompt 3:</b> A cheerful, happy Corgi playing in a futuristic park during sunset, set in a cyberpunk style. The Corgi has a playful expression, wagging its tail and running around in the grass. The park is illuminated by neon lights and surrounded by towering skyscrapers with holographic advertisements flashing on their surfaces. The sky is a blend of orange and purple hues, creating a striking contrast against the dark cityscape. The Corgi is in the foreground, while the vibrant city lights and buildings create a dynamic background. The scene captures the essence of a cyberpunk world with natural elements intertwined. Medium close-up shot focusing on the Corgi's joyful playfulness. The camera angle is slightly elevated, providing a clear view of the Corgi and the surrounding environment.
+              </p>
+            </details>
+          </div>
+
+
+          <div class="single-video">
+            <video controls autoplay loop muted playsinline style="width: 60%;">
+              <source src="./static/videos/long_context/1.mp4" type="video/mp4">
+            </video>
+            <!-- Text Prompts (Collapsible) -->
+            <details class="text-prompts">
+              <summary class="expand-btn">Click to expand text prompts</summary>
+
+              <p class="prompt-line">
+                <b>Prompt 1:</b> A close-up shot of a middle-aged man carefully counting a large pile of cash on a wooden table. He has a focused expression, running his fingers methodically through the bills. His face shows concentration, with slight creases forming around his eyes as he counts each dollar. The lighting is soft, casting gentle shadows on the table and highlighting the texture of the money. The background is blurred but shows a simple, modest home interior. The man continues to count the money steadily, occasionally glancing up as if checking for accuracy. Medium close-up, static shot.
+              </p>
+
+              <p class="prompt-line">
+                <b>Prompt 2:</b> A panoramic view of a bustling city park on a sunny afternoon. People of all ages are enjoying the day, some playing frisbee, others sitting on benches, and children running around. The sky is clear blue, with a few fluffy clouds. The park is filled with tall trees, their leaves rustling in the gentle breeze. A small pond with ducks adds to the serene atmosphere. The camera slowly pans across the scene, capturing the vibrant energy and peaceful moments of the park.
+              </p>
+
+              <p class="prompt-line">
+                <b>Prompt 3:</b> A close-up shot of a middle-aged man carefully counting a large pile of cash on a wooden table. He has a focused expression, running his fingers methodically through the bills. His face shows concentration, with slight creases forming around his eyes as he counts each dollar. The lighting is soft, casting gentle shadows on the table and highlighting the texture of the money. The background is blurred but shows a simple, modest home interior. The man continues to count the money steadily, occasionally glancing up as if checking for accuracy. Medium close-up, static shot.
+              </p>
+            </details>
+          </div>
+
+
+
+          <div class="single-video">
+            <video controls autoplay loop muted playsinline style="width: 60%;">
+              <source src="./static/videos/long_context/2.mp4" type="video/mp4">
+            </video>
+            <!-- Text Prompts (Collapsible) -->
+            <details class="text-prompts">
+              <summary class="expand-btn">Click to expand text prompts</summary>
+
+              <p class="prompt-line">
+                <b>Prompt 1:</b> A cheerful, happy Corgi playing in a futuristic park during sunset, set in a cyberpunk style. The Corgi has a playful expression, wagging its tail and running around in the grass. The park is illuminated by neon lights and surrounded by towering skyscrapers with holographic advertisements flashing on their surfaces. The sky is a blend of orange and purple hues, creating a striking contrast against the dark cityscape. The Corgi is in the foreground, while the vibrant city lights and buildings create a dynamic background. The scene captures the essence of a cyberpunk world with natural elements intertwined. Medium close-up shot focusing on the Corgi's joyful playfulness. The camera angle is slightly elevated, providing a clear view of the Corgi and the surrounding environment.
+              </p>
+
+              <p class="prompt-line">
+                <b>Prompt 2:</b> A bustling street market at night in a futuristic city. Vendors sell exotic foods and gadgets under the glow of colorful neon signs. Shoppers navigate through narrow, crowded alleys filled with the sounds of chatter and the smells of street food. Holographic advertisements float above the stalls, and drones zip through the air delivering packages. The street is lit by a mix of warm and cool lights, creating a vibrant and lively atmosphere. The scene captures the energy and diversity of a cyberpunk marketplace. Wide shot showing the bustling crowd and the detailed environment.
+              </p>
+
+              <p class="prompt-line">
+                <b>Prompt 3:</b> A cheerful, happy Corgi playing in a futuristic park during sunset, set in a cyberpunk style. The Corgi has a playful expression, wagging its tail and running around in the grass. The park is illuminated by neon lights and surrounded by towering skyscrapers with holographic advertisements flashing on their surfaces. The sky is a blend of orange and purple hues, creating a striking contrast against the dark cityscape. The Corgi is in the foreground, while the vibrant city lights and buildings create a dynamic background. The scene captures the essence of a cyberpunk world with natural elements intertwined. Medium close-up shot focusing on the Corgi's joyful playfulness. The camera angle is slightly elevated, providing a clear view of the Corgi and the surrounding environment.
+              </p>
+            </details>
+          </div>
+
+
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Citation</h2>
+        <div class="content has-text-justified">
+          <p>Please cite us if our work is useful for your research.</p>
+          <pre><code>
+            
+          </code></pre>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+</body>
+
+</html>
