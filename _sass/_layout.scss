@@ -3,9 +3,12 @@
  ******************************************************************************/
 
 body {
+  font-family: 'Nunito', 'TT Norms Pro', 'Lato';
+  font-weight: 400;
   padding-bottom: 70px;
   color: var(--global-text-color);
   background-color: var(--global-bg-color);
+
 
   h1,
   h2,
@@ -34,7 +37,36 @@ body.sticky-bottom-footer {
 // Profile
 .profile {
   img {
-    width: 85%;
+    width: 100%;
+  }
+
+  .more-info {
+    margin-top: 0.75rem;
+    text-align: center;
+    font-size: 0.85rem;
+    color: var(--global-text-color-light);
+
+    p {
+      margin-bottom: 0.2rem;
+    }
+  }
+
+  // CSS equivalent of \vspace{-XX}: negative margin-top pulls the
+  // photo+address upward. More negative = higher. Adjust this value
+  // to tune vertical alignment with the text paragraphs.
+  &.float-right {
+    margin-top: -3rem;
+  }
+}
+
+// Compact header: reduce bottom gap so the floated profile can
+// sit closer to the title line.
+.post-header {
+  .post-title {
+    margin-bottom: 0.25rem;
+  }
+  .desc {
+    margin-bottom: 0.5rem;
   }
 }
 
@@ -51,3 +83,30 @@ body.sticky-bottom-footer {
 *****************************************************************************/
 
 // TODO: redefine projects layout.
+
+// Custom bold: uses system font with heavier weight to stand out from body text
+.mystrong {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-weight: 700;
+}
+
+html[data-theme="dark"] {
+  .mystrong,
+  strong,
+  b {
+    color: #{$white-color};
+  }
+}
+
+// News section
+.news {
+  background-color: var(--global-news-bg);
+  border-left: 3px solid var(--global-theme-color);
+  border-radius: 4px;
+  padding: 1rem 1.25rem;
+  margin-bottom: 2.5rem;
+
+  .table-responsive {
+    overflow-y: scroll;
+  }
+}

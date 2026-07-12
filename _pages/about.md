@@ -2,17 +2,13 @@
 layout: about
 title: About
 permalink: /
-subtitle: Master student @Tsinghua University
+subtitle: PhD student@EPFL
 
 profile:
   align: right
   image: prof_img.jpg
   image_circular: false # crops the image to make it circular
-  more_info: >
-    <p></p>
-    <p></p>
-    <p></p>
-
+  more_info: 
 news: false # includes a list of news items
 latest_posts: false # includes a list of the newest posts
 selected_papers: true # includes a list of papers marked as "selected={true}"
@@ -21,20 +17,26 @@ social: true # includes social icons at the bottom of the page
 
 Hi, there 👋
 
-I am a Master student at [Tsinghua Shenzhen International Graduate School (SIGS)](https://www.sigs.tsinghua.edu.cn/en/), [Tsinghua University](https://www.tsinghua.edu.cn/en/index.htm), advised by Prof. [Shu-tao Xia](https://www.sigs.tsinghua.edu.cn/xst_en/main.htm). I also work closely with Prof. [Tao Dai](https://scholar.google.com.hk/citations?user=MqJNdaAAAAAJ&hl=zh-CN&oi=ao) and Prof. [Yawei Li](https://yaweili.bitbucket.io/). Before that, I obtained my dual degree of B.Eng. & B.Ec. from [Nankai University](https://en.nankai.edu.cn/). 
+I am currently a PhD student in Computer Science at <a href="https://www.epfl.ch/en/" target="_blank">EPFL</a>, advised by Prof. <a href="https://brbiclab.epfl.ch/" target="_blank">Maria Brbić</a>. I also work closely with Prof. <a href="https://ofsoundof.github.io/" target="_blank">Yawei Li</a> at NTU and Prof. <a href="https://scholar.google.com/citations?user=MqJNdaAAAAAJ" target="_blank">Tao Dai</a> at SZU. Prior to that, I received my master’s degree from <a href="https://www.tsinghua.edu.cn/en/" target="_blank">Tsinghua University</a> under the supervision of Prof. <a href="https://scholar.google.com/citations?user=koAXTXgAAAAJ" target="_blank">Shu-Tao Xia</a>, and my dual bachelor’s degrees in Engineering and Economics from <a href="https://en.nankai.edu.cn/" target="_blank">Nankai University</a>.
+
+---
+
+My research focuses on building <span class="mystrong">generalizable</span> and <span class="mystrong">efficient</span> AI systems for real world. Specifically, generalizability refers to developing AI models and training paradigms that can robustly adapt to diverse tasks, domains, and data distributions beyond their training distribution, moving toward more flexible and general intelligence. Efficiency focuses on reducing the computational, memory, latency, and energy costs of AI systems, enabling practical deployment across both cloud and edge environments. I believe these two directions should be jointly optimized, since future AI systems must not only generalize well across diverse scenarios, but also remain sustainable and accessible in eage applications.
 
 
-My research interests focus on:
+My current research interests include:
 
-- **Generative Computer Vision**: trying to build a realistic digital world, such as image generation, image restoration, image super-resolution, etc.
-- **Efficient Artificial Intelligence**: trying to allow AI available for everyone, such as parameter efficient fine-tuning, network quantization, sparsity, distillation, etc.
+- <span class="mystrong">Efficient AI</span>. My work covers a broad range of model compression and acceleration techniques for LLMs and Diffusion models, including efficient model design (<a href="https://github.com/csguoh/MambaIR" target="_blank">MambaIR family</a>), pruning (<a href="https://github.com/csguoh/FastVAR" target="_blank">FastVAR</a>), caching (<a href="https://csguoh.github.io/project/DummyForcing/" target="_blank">Dummy-Forcing</a>), quantization (<a href="https://github.com/csguoh/OBR" target="_blank">OBR</a>), parameter-efficient adaptation (<a href="https://github.com/csguoh/AdaptIR" target="_blank">AdaptIR</a>), knowledge distillation (<a href="https://github.com/csguoh/KD-LTR" target="_blank">KD-LTR</a>, <a href="https://github.com/Hank0626/CALF" target="_blank">CALF</a>), and tensor decomposition (<a href="https://github.com/csguoh/intlora" target="_blank">IntLoRA</a>). All the above-mentioned works are my <span class="mystrong">first-author</span> works published at top-tier CV&ML conferences.
 
 
-<div class="alert alert-info" style="max-width: 660px; color: #5445b4; background-color: #F0F8FF;">
-<span style="color: #5445b4;">
-<b>Looking for a PhD Position!</b> <br>
-I am actively seeking a PhD position or an academic internship. If you are interested, feel free to contact me.🤗.
-</span>
+- <span class="mystrong">AI for Science</span>. I am also interested in generalizable and efficient AI systems for biology. Biological data presents unique challenges: diverse omics modalities require strong generalization across heterogeneous sources, while ultra-long sequences such as whole genomes demand efficient algorithms. My recent research explores the regulatory relationships among DNA, RNA, and proteins along the <a href="https://en.wikipedia.org/wiki/Central_dogma_of_molecular_biology" target="_blank">central dogma of molecular biology</a>, aiming to develop generalizable and efficient virtual cell models that unify different omics modalities. My long-term goal is to build AI systems that can drive future biological discovery and biomedical research.
+
+
+
+<div class="alert alert-info collab-alert">
+<span>
+<b>Looking for academic collaborations!</b> <br>
+I am always open to potential collaborations on the above research topics, and welcome motivated students to work with me on projects targeting top-tier conferences. Feel free to reach out 🤗</span>
 </div>
 
 
@@ -42,12 +44,35 @@ I am actively seeking a PhD position or an academic internship. If you are inter
 
 email: cshguo[at]gmail[dot]com
 
-*(Last Update: 2025-06-27)*
 
 ### News
 <div class="news">
   <div class="table-responsive" style="max-height: 16vw">
     <table class="table table-sm table-borderless">
+      <tr>
+        <th scope="row" style="width: 150px;">June 2026</th>
+        <td>
+        I graduated from <a href="https://www.tsinghua.edu.cn/en/" target="_blank"><b>Tsinghua University</b></a> and was honored as the <strong>Outstanding Master Graduate</strong>.
+        </td>
+      </tr> 
+      <tr>
+        <th scope="row" style="width: 150px;">May 2026</th>
+        <td>
+        My master's work was selected as the <strong>Outstanding Master Thesis</strong> at Tsinghua University.
+        </td>
+      </tr> 
+      <tr>
+        <th scope="row" style="width: 150px;">Feb 2026</th>
+        <td>
+        I served as the co-organizer of the <a href="https://www.cvlai.net/ntire/2026/" target="_blank"><b>CVPR 2026 NTIRE Workshop</b></a> on Efficient Super-Resolution, Image Denoising, and AI-Flash Portrait tracks.
+        </td>
+      </tr> 
+      <tr>
+        <th scope="row" style="width: 150px;">Jan 25, 2026</th>
+        <td>
+        The LLM inference speedup work <a href="https://github.com/csguoh/OBR" target="_blank"><b>OBR</b></a> during my internship at ETH Zürich has been accepted by <strong>ICLR 2026</strong>!
+        </td>
+      </tr> 
       <tr>
         <th scope="row" style="width: 150px;">June 26, 2025</th>
         <td>

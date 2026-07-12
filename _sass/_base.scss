@@ -201,7 +201,7 @@ blockquote {
 
 @media (min-width: 576px) {
   .profile {
-    width: 30%;
+    width: 28%;
 
     .address {
       p {
@@ -216,11 +216,11 @@ blockquote {
   font-size: 0.875rem;
 
   a {
-    color: inherit;
+    color: var(--global-theme-color);
 
     &:hover {
-      color: var(--global-theme-color);
-      text-decoration: none;
+      color: var(--global-hover-color);
+      text-decoration: underline;
     }
   }
 }
@@ -629,7 +629,7 @@ footer.sticky-bottom {
     padding-top: 0.5rem;
     margin-top: 2rem;
     margin-bottom: 1rem;
-    text-align: right;
+    text-align: left;
   }
 }
 
@@ -659,8 +659,8 @@ footer.sticky-bottom {
     border-top: 1px solid var(--global-divider-color);
     padding-top: 1rem;
     margin-top: 2rem;
-    margin-bottom: -2rem;
-    text-align: right;
+    margin-bottom: 0.5rem;
+    text-align: left;
   }
 
   ol.bibliography {
@@ -673,8 +673,9 @@ footer.sticky-bottom {
 
       .preview {
         width: 100%;
-        min-width: 100px;
-        max-width: 250px;
+        max-width: 400px;
+        aspect-ratio: 16 / 9;
+        object-fit: cover;
       }
 
       .abbr {
@@ -1096,4 +1097,20 @@ swiper-container {
   --swiper-navigation-color: var(--global-theme-color);
   --swiper-pagination-color: var(--global-theme-color);
   --swiper-pagination-bullet-inactive-color: var(--global-text-color);
+}
+
+// Collaboration alert box with light/dark mode support
+.collab-alert {
+  color: var(--global-alert-collab-color);
+  background-color: var(--global-alert-collab-bg);
+
+  b, strong {
+    color: var(--global-alert-collab-color);
+  }
+
+  html[data-theme="dark"] & {
+    b, strong {
+      color: #d5cff0;
+    }
+  }
 }

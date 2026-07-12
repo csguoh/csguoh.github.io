@@ -1,0 +1,40 @@
+---
+layout: default
+---
+<div class="post">
+  <article>
+    <div class="row" style="padding-bottom: 10px;">
+      <div class="col-sm-9">
+        Ph.D., Information Engineering <br/>
+        Student, Chinese University of Hong Kong <br/>
+        <a href="assets/pdf/your_cv.pdf" target="_blank"><b>Curriculum Vitae</b></a> |
+        <a href="{{ '/blog/' | relative_url }}" target="_blank"><b>Blog</b></a>
+        <br/>
+        <br/>
+        🎉 Checkout our latest works:
+        <ul style="margin-top: 5px;">
+          <li>
+            <a href="https://your-project-link.com" target="_blank">Project Name</a>:
+            project description
+          </li>
+        </ul>
+      </div>
+      <div class="col-sm-3">
+        {%- if page.profile.image %}
+        {%- assign profile_image_path = page.profile.image | prepend: 'assets/img/' -%}
+        {% if page.profile.image_circular %}
+        {%- assign profile_image_class = "img-fluid z-depth-1 rounded-circle" -%}
+        {% else %}
+        {%- assign profile_image_class = "img-fluid z-depth-1 rounded" -%}
+        {% endif %}
+        {% include figure.liquid loading="auto" path=profile_image_path class=profile_image_class alt=page.profile.image cache_bust=true -%}
+        {% endif -%}
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        {{ content }}
+      </div>
+    </div>
+  </article>
+</div>
