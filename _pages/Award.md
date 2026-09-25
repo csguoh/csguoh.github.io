@@ -6,6 +6,8 @@ nav: true
 nav_order: 3
 ---
 
+- **2026.9**: EDIC PhD Fellowship from EPFL
+
 - **2026.6**: Outstanding Master's Graduate of Tsinghua University
 
 - **2026.5**: Outstanding Master's Thesis of Tsinghua University

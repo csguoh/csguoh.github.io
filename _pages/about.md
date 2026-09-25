@@ -26,17 +26,18 @@ My research focuses on building <span class="mystrong">generalizable</span> and 
 
 My current research interests include:
 
-- <span class="mystrong">Efficient AI</span>. My work covers a broad range of model compression and acceleration techniques for LLMs and Diffusion models, including efficient model design (<a href="https://github.com/csguoh/MambaIR" target="_blank">MambaIR family</a>), pruning (<a href="https://github.com/csguoh/FastVAR" target="_blank">FastVAR</a>), caching (<a href="https://csguoh.github.io/project/DummyForcing/" target="_blank">Dummy-Forcing</a>), quantization (<a href="https://github.com/csguoh/OBR" target="_blank">OBR</a>), parameter-efficient adaptation (<a href="https://github.com/csguoh/AdaptIR" target="_blank">AdaptIR</a>), knowledge distillation (<a href="https://github.com/csguoh/KD-LTR" target="_blank">KD-LTR</a>, <a href="https://github.com/Hank0626/CALF" target="_blank">CALF</a>), and tensor decomposition (<a href="https://github.com/csguoh/intlora" target="_blank">IntLoRA</a>). All the above-mentioned works are my <span class="mystrong">first-author</span> works published at top-tier CV&ML conferences.
-
-
 - <span class="mystrong">AI for Science</span>. I am also interested in generalizable and efficient AI systems for biology. Biological data presents unique challenges: diverse omics modalities require strong generalization across heterogeneous sources, while ultra-long sequences such as whole genomes demand efficient algorithms. My recent research explores the regulatory relationships among DNA, RNA, and proteins along the <a href="https://en.wikipedia.org/wiki/Central_dogma_of_molecular_biology" target="_blank">central dogma of molecular biology</a>, aiming to develop generalizable and efficient virtual cell models that unify different omics modalities. My long-term goal is to build AI systems that can drive future biological discovery and biomedical research.
+
+
+- <span class="mystrong">Efficient AI</span>. My work covers a broad range of model compression and acceleration techniques for LLMs and Diffusion models, including efficient model design (<a href="https://github.com/csguoh/MambaIR" target="_blank">MambaIR family</a>), pruning (<a href="https://github.com/csguoh/FastVAR" target="_blank">FastVAR</a>), caching (<a href="https://csguoh.github.io/project/DummyForcing/" target="_blank">Dummy-Forcing</a>), quantization (<a href="https://github.com/csguoh/OBR" target="_blank">OBR</a>), parameter-efficient adaptation (<a href="https://github.com/csguoh/AdaptIR" target="_blank">AdaptIR</a>), knowledge distillation (<a href="https://github.com/csguoh/KD-LTR" target="_blank">KD-LTR</a>, <a href="https://github.com/Hank0626/CALF" target="_blank">CALF</a>), and tensor decomposition (<a href="https://github.com/csguoh/intlora" target="_blank">IntLoRA</a>). All the above-mentioned works are my <span class="mystrong">first-author</span> works published at top-tier CV&ML conferences.
 
 
 
 <div class="alert alert-info collab-alert">
 <span>
 <b>Looking for academic collaborations!</b> <br>
-I am always open to potential collaborations on the above research topics, and welcome motivated students to work with me on projects targeting top-tier conferences. Feel free to reach out 🤗</span>
+I am always open to potential collaborations on the above research topics, and welcome motivated students to work with me on projects targeting top-tier conferences. Feel free to reach out 🤗 <br>
+<b>For EPFL Master Student</b>: If you want to do any form of project (e.g., semester projects, Summer@EPFL, lab internships, etc.), welcome to refer to <a href="https://brbiclab.epfl.ch/join-us/" target="_blank">this link</a> to submit your application and CC <a href="mailto:cshguo@gmail.com">cshguo@gmail.com</a> at any time you like.</span>
 </div>
 
 
@@ -49,6 +50,12 @@ email: cshguo[at]gmail[dot]com
 <div class="news">
   <div class="table-responsive" style="max-height: 16vw">
     <table class="table table-sm table-borderless">
+      <tr>
+        <th scope="row" style="width: 150px;">Sept. 2026</th>
+        <td>
+        I start my PhD journey at <a href="https://www.epfl.ch/en/" target="_blank"><b>EPFL</b></a> with the <a href="https://www.epfl.ch/education/phd/edic-computer-and-communication-sciences/" target="_blank"><b>EDIC Fellowship</b></a>!
+        </td>
+      </tr> 
       <tr>
         <th scope="row" style="width: 150px;">June 2026</th>
         <td>
